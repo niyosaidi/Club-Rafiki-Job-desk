@@ -28,7 +28,15 @@ export default function App(): React.ReactNode {
     try {
       const session = createChatSession(t.systemInstructions[currentMode]);
       setChatSession(session);
-      setMessages([]); // Clear any previous messages
+      
+      // Add a welcome message for interactive modes
+      const welcomeMessage = t.welcomeMessages[currentMode];
+      if (welcomeMessage) {
+        setMessages([{ role: 'model', text: welcomeMessage }]);
+      } else {
+        setMessages([]); // Clear messages for other modes like review
+      }
+      
       setIsLoading(false); // Ensure loading is reset
     } catch (error) {
         console.error("Failed to create chat session:", error);
