@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { AppMode } from '../types';
-import { DocumentTextIcon, PencilSquareIcon, ChatBubbleLeftRightIcon, RafikiIcon, GlobeAltIcon, ChevronDownIcon, HomeIcon } from './icons';
+import { DocumentTextIcon, PencilSquareIcon, ChatBubbleLeftRightIcon, RafikiIcon, GlobeAltIcon, ChevronDownIcon, HomeIcon, DocumentCheckIcon, EnvelopeOpenIcon } from './icons';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface SidebarProps {
@@ -11,14 +12,18 @@ interface SidebarProps {
 const navModes = [
   AppMode.HOME,
   AppMode.CV_BUILDER,
+  AppMode.CV_REVIEW,
   AppMode.LETTER_WRITER,
+  AppMode.LETTER_REVIEW,
   AppMode.INTERVIEW_PREP,
 ];
 
 const navIcons: Record<AppMode, React.ReactElement> = {
     [AppMode.HOME]: <HomeIcon />,
     [AppMode.CV_BUILDER]: <DocumentTextIcon />,
+    [AppMode.CV_REVIEW]: <DocumentCheckIcon />,
     [AppMode.LETTER_WRITER]: <PencilSquareIcon />,
+    [AppMode.LETTER_REVIEW]: <EnvelopeOpenIcon />,
     [AppMode.INTERVIEW_PREP]: <ChatBubbleLeftRightIcon />,
 };
 

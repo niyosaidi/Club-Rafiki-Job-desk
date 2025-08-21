@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 // Using React.SVGProps for type safety on standard SVG attributes
@@ -15,9 +16,21 @@ export const DocumentTextIcon: React.FC<IconProps> = (props) => (
   </svg>
 );
 
+export const DocumentCheckIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 0 1 9 9v.375M10.125 2.25A3.375 3.375 0 0 1 13.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 0 1 3.375 3.375M9 15l2.25 2.25L15 12" />
+  </svg>
+);
+
 export const PencilSquareIcon: React.FC<IconProps> = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" {...props}>
     <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+  </svg>
+);
+
+export const EnvelopeOpenIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488a2.25 2.25 0 0 1-2.18 0l-6.478-3.488A2.25 2.25 0 0 1 2.25 9.906V9Zm0 0a2.25 2.25 0 0 0-2.25-2.25h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.906c0 .612-.316 1.183-.815 1.518l-6.478 3.488a2.25 2.25 0 0 1-2.18 0l-6.478-3.488A1.875 1.875 0 0 1 2.25 9.906V9m19.5 0a2.25 2.25 0 0 0-2.25-2.25h-15a2.25 2.25 0 0 0-2.25 2.25m15 5.25-3.809 2.034a2.25 2.25 0 0 1-2.18 0l-3.809-2.034" />
   </svg>
 );
 
@@ -57,6 +70,12 @@ export const UserIcon: React.FC<IconProps> = (props) => (
   </svg>
 );
 
+export const DocumentArrowUpIcon: React.FC<IconProps> = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m.15-3.125 3.375 3.375M11.25 6H8.25m5.25 15-3.375-3.375M13.5 18.75h3.375" />
+    </svg>
+);
+
 export const IllustrationCvBuilder: React.FC<IconProps> = (props) => (
   <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <rect width="80" height="80" rx="16" fill="#EFF6FF"/>
@@ -64,6 +83,17 @@ export const IllustrationCvBuilder: React.FC<IconProps> = (props) => (
     <path d="M45 22V35H58" stroke="#60A5FA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     <line x1="30" y1="42" x2="50" y2="42" stroke="#93C5FD" strokeWidth="2" strokeLinecap="round"/>
     <line x1="30" y1="48" x2="44" y2="48" stroke="#93C5FD" strokeWidth="2" strokeLinecap="round"/>
+  </svg>
+);
+
+export const IllustrationCvReview: React.FC<IconProps> = (props) => (
+  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <rect width="80" height="80" rx="16" fill="#F5F3FF"/>
+    <path d="M22 24C22 22.8954 22.8954 22 24 22H46L58 34V46" stroke="#A78BFA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M45 22V35H58" stroke="#A78BFA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <line x1="30" y1="42" x2="40" y2="42" stroke="#C4B5FD" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M57 59L52 54" stroke="#34D399" strokeWidth="3" strokeLinecap="round"/>
+    <circle cx="48" cy="48" r="9" stroke="#34D399" strokeWidth="3"/>
   </svg>
 );
 
@@ -77,6 +107,15 @@ export const IllustrationLetterWriter: React.FC<IconProps> = (props) => (
   </svg>
 );
 
+export const IllustrationLetterReview: React.FC<IconProps> = (props) => (
+  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <rect width="80" height="80" rx="16" fill="#F0FDF4"/>
+    <path d="M22 35H58V46" stroke="#34D399" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M58 35L40 48L22 35" stroke="#34D399" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M57 59L52 54" stroke="#A78BFA" strokeWidth="3" strokeLinecap="round"/>
+    <circle cx="48" cy="48" r="9" stroke="#A78BFA" strokeWidth="3"/>
+  </svg>
+);
 
 export const IllustrationInterviewPrep: React.FC<IconProps> = (props) => (
   <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
