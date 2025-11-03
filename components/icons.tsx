@@ -40,6 +40,18 @@ export const ChatBubbleLeftRightIcon: React.FC<IconProps> = (props) => (
   </svg>
 );
 
+export const PlusCircleIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+  </svg>
+);
+
+export const LightBulbIcon: React.FC<IconProps> = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.311a7.5 7.5 0 0 1-7.5 0c-1.421-.492-2.697-1.29-3.75-2.311M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+);
+
 export const RafikiIcon: React.FC<IconProps> = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" {...props}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" />
@@ -73,6 +85,12 @@ export const UserIcon: React.FC<IconProps> = (props) => (
 export const DocumentArrowUpIcon: React.FC<IconProps> = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" {...props}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m.15-3.125 3.375 3.375M11.25 6H8.25m5.25 15-3.375-3.375M13.5 18.75h3.375" />
+    </svg>
+);
+
+export const ArrowDownTrayIcon: React.FC<IconProps> = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
     </svg>
 );
 
@@ -122,5 +140,30 @@ export const IllustrationInterviewPrep: React.FC<IconProps> = (props) => (
     <rect width="80" height="80" rx="16" fill="#F5F3FF"/>
     <path d="M38 48C38 52.4183 34.4183 56 30 56C25.5817 56 22 52.4183 22 48C22 43.5817 25.5817 40 30 40C30.9836 40 31.9213 40.1654 32.7885 40.4682L42 28" stroke="#A78BFA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     <path d="M58 32C58 27.5817 54.4183 24 50 24C45.5817 24 42 27.5817 42 32C42 36.4183 45.5817 40 50 40C50.9836 40 51.9213 39.8346 52.7885 39.5318L58 44" stroke="#60A5FA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+export const IllustrationJobCreation: React.FC<IconProps> = (props) => (
+  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <rect width="80" height="80" rx="16" fill="#FFFBEB"/>
+    <path d="M40 32C44.4183 32 48 35.5817 48 40C48 42.4464 46.8528 44.609 45 45.9614V49C45 49.5523 44.5523 50 44 50H36C35.4477 50 35 49.5523 35 49V45.9614C33.1472 44.609 32 42.4464 32 40C32 35.5817 35.5817 32 40 32Z" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M40 50V54" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M36 54H44" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M40 26V28" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M28 40H30" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M50 40H52" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M31.0503 31.0503L32.4645 32.4645" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M47.5355 47.5355L48.9497 48.9497" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M48.9497 31.0503L47.5355 32.4645" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M32.4645 47.5355L31.0503 48.9497" stroke="#F59E0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+export const IllustrationBusinessIdea: React.FC<IconProps> = (props) => (
+  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <rect width="80" height="80" rx="16" fill="#FEF3C7"/>
+    <path d="M25 55V45L35 50L45 35L55 42V55H25Z" stroke="#FBBF24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M55 25H35C32.2386 25 30 27.2386 30 30V32" stroke="#FBBF24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M42 25L45 22L48 25" stroke="#FBBF24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );

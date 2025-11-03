@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { AppMode } from '../types';
 import { useLanguage } from '../contexts/LanguageContext';
-import { IllustrationCvBuilder, IllustrationLetterWriter, IllustrationInterviewPrep, IllustrationCvReview, IllustrationLetterReview } from './icons';
+import { IllustrationCvBuilder, IllustrationLetterWriter, IllustrationInterviewPrep, IllustrationCvReview, IllustrationLetterReview, IllustrationBusinessIdea } from './icons';
 
 interface HomeScreenProps {
   setMode: (mode: AppMode) => void;
@@ -29,6 +28,10 @@ const services = [
     mode: AppMode.INTERVIEW_PREP, 
     icon: <IllustrationInterviewPrep />,
   },
+  { 
+    mode: AppMode.VENTURE_LAUNCHPAD, 
+    icon: <IllustrationBusinessIdea />,
+  },
 ];
 
 export default function HomeScreen({ setMode }: HomeScreenProps): React.ReactNode {
@@ -45,7 +48,7 @@ export default function HomeScreen({ setMode }: HomeScreenProps): React.ReactNod
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 max-w-screen-xl w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl w-full">
         {services.map(service => (
           <button
             key={service.mode}

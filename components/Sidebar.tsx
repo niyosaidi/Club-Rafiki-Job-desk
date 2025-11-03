@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { AppMode } from '../types';
-import { DocumentTextIcon, PencilSquareIcon, ChatBubbleLeftRightIcon, RafikiIcon, GlobeAltIcon, ChevronDownIcon, HomeIcon, DocumentCheckIcon, EnvelopeOpenIcon } from './icons';
+import { DocumentTextIcon, PencilSquareIcon, ChatBubbleLeftRightIcon, GlobeAltIcon, ChevronDownIcon, HomeIcon, DocumentCheckIcon, EnvelopeOpenIcon, PlusCircleIcon, LightBulbIcon } from './icons';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface SidebarProps {
@@ -16,6 +15,7 @@ const navModes = [
   AppMode.LETTER_WRITER,
   AppMode.LETTER_REVIEW,
   AppMode.INTERVIEW_PREP,
+  AppMode.VENTURE_LAUNCHPAD,
 ];
 
 const navIcons: Record<AppMode, React.ReactElement> = {
@@ -25,6 +25,7 @@ const navIcons: Record<AppMode, React.ReactElement> = {
     [AppMode.LETTER_WRITER]: <PencilSquareIcon />,
     [AppMode.LETTER_REVIEW]: <EnvelopeOpenIcon />,
     [AppMode.INTERVIEW_PREP]: <ChatBubbleLeftRightIcon />,
+    [AppMode.VENTURE_LAUNCHPAD]: <LightBulbIcon />,
 };
 
 export default function Sidebar({ currentMode, setMode }: SidebarProps): React.ReactNode {
@@ -33,9 +34,7 @@ export default function Sidebar({ currentMode, setMode }: SidebarProps): React.R
   return (
     <aside className="w-72 bg-white dark:bg-slate-950 flex flex-col border-r border-slate-200/80 dark:border-slate-800/50 p-6">
       <div className="flex items-center gap-3 mb-10">
-        <div className="w-11 h-11 bg-gradient-to-br from-rafiki-blue-500 to-rafiki-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-rafiki-blue-500/30">
-            <RafikiIcon className="w-6 h-6 text-white"/>
-        </div>
+        <img src="https://i.ibb.co/8L5kKXvq/Club-Rafiki-logo-Photoroom.png" alt="Club Rafiki Logo" className="w-11 h-11" />
         <h1 className="text-xl font-semibold text-slate-800 dark:text-white tracking-tight">{t.APP_NAME}</h1>
       </div>
       <nav className="flex flex-col gap-2">

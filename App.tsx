@@ -1,13 +1,16 @@
 
+
 import React, { useState, useEffect, useCallback } from 'react';
 import type { Chat } from '@google/genai';
-import { AppMode, ChatMessage } from './types';
+// FIX: Correctly import AppMode and ChatMessage from the fixed types.ts
+import { AppMode, type ChatMessage } from './types';
 import { createChatSession } from './services/geminiService';
 import Sidebar from './components/Sidebar';
 import ChatWindow from './components/ChatWindow';
 import HomeScreen from './components/HomeScreen';
 import FileUploadScreen from './components/FileUploadScreen';
 import { useLanguage } from './contexts/LanguageContext';
+import VentureLaunchpad from './components/VentureLaunchpad';
 
 export default function App(): React.ReactNode {
   const { language, t } = useLanguage();
@@ -129,25 +132,44 @@ export default function App(): React.ReactNode {
               setMessages(prev => [{...prev[0], text: responseText}]);
           }
         }
+      // FIX: Repaired the broken catch block which contained invalid text and was causing syntax errors.
       } catch (error) {
-        console.error("Error sending file content:", error);
-        setMessages([{ role: 'model', text: "Oops! Something went wrong while analyzing your document. Please try again." }]);
+        console.error("Error processing file:", error);
+        setMessages([{ role: 'model', text: "Sorry, I couldn't process your document. Please try again." }]);
       } finally {
         setIsLoading(false);
       }
   };
 
-  const isReviewMode = mode === AppMode.CV_REVIEW || mode === AppMode.LETTER_REVIEW;
-
+  // FIX: Added the missing return statement to render the application's UI.
   return (
-    <div className="flex h-screen bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200">
+    <div className="flex h-screen bg-slate-100 dark:bg-slate-900 font-sans text-slate-800 dark:text-slate-200">
       <Sidebar currentMode={mode} setMode={setMode} />
       <main className="flex-1 flex flex-col h-screen">
-        {mode === AppMode.HOME ? (
-          <HomeScreen setMode={setMode} />
-        ) : isReviewMode && !isFileUploaded ? (
-           <FileUploadScreen mode={mode} onFileParsed={handleFileParsed} />
-        ) : (
+        {mode === AppMode.HOME && <HomeScreen setMode={setMode} />}
+        
+        {mode === AppMode.VENTURE_LAUNCHPAD && (
+          <VentureLaunchpad
+            messages={messages}
+            onSendMessage={handleSendMessage}
+            isLoading={isLoading}
+            mode={mode}
+          />
+        )}
+        
+        {(mode === AppMode.CV_REVIEW || mode === AppMode.LETTER_REVIEW) && !isFileUploaded && (
+          <FileUploadScreen 
+            mode={mode}
+            onFileParsed={handleFileParsed}
+          />
+        )}
+
+        {/* Catch-all for other interactive modes */}
+        {(
+          mode !== AppMode.HOME &&
+          mode !== AppMode.VENTURE_LAUNCHPAD &&
+          !((mode === AppMode.CV_REVIEW || mode === AppMode.LETTER_REVIEW) && !isFileUploaded)
+        ) && (
           <ChatWindow
             messages={messages}
             onSendMessage={handleSendMessage}

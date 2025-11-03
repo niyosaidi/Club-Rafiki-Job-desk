@@ -19,8 +19,9 @@ const MarkdownRenderer: React.FC<{ text: string }> = ({ text }) => {
     });
   };
 
-  const elements: JSX.Element[] = [];
-  const listItems: JSX.Element[] = [];
+  // FIX: Explicitly use React.ReactElement to resolve "Cannot find namespace 'JSX'" error.
+  const elements: React.ReactElement[] = [];
+  const listItems: React.ReactElement[] = [];
   const lines = text.split('\n');
 
   const flushList = (key: string | number) => {
@@ -53,7 +54,7 @@ export default function Message({ message }: MessageProps): React.ReactNode {
   const isModel = message.role === 'model';
 
   return (
-    <div className={`flex items-start gap-4 ${isModel ? 'justify-start' : 'justify-end'}`}>
+    <div className={`flex items-start gap-4 ${isModel ? 'justify-start model-message-wrapper' : 'justify-end'}`}>
       {isModel && (
         <div className="w-9 h-9 rounded-full bg-gradient-to-br from-rafiki-blue-500 to-rafiki-blue-600 flex-shrink-0 flex items-center justify-center text-white shadow-lg shadow-rafiki-blue-500/30">
           <RafikiIcon className="w-5 h-5"/>
