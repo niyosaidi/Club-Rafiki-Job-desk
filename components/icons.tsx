@@ -36,7 +36,7 @@ export const EnvelopeOpenIcon: React.FC<IconProps> = (props) => (
 
 export const ChatBubbleLeftRightIcon: React.FC<IconProps> = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" {...props}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193l-3.72-3.72a1.125 1.125 0 0 0-1.59.022l-1.17 1.17-1.17-1.17a1.125 1.125 0 0 0-1.59-.022l-3.72 3.72-1.98-.99v-4.286c0-.97.616-1.813 1.5-2.097m14.25-3.866-2.25-2.25a1.125 1.125 0 0 0-1.59 0l-1.17 1.17-1.17-1.17a1.125 1.125 0 0 0-1.59 0l-2.25 2.25a1.125 1.125 0 0 0 0 1.59l1.17 1.17-1.17 1.17a1.125 1.125 0 0 0 0 1.59l2.25 2.25a1.125 1.125 0 0 0 1.59 0l1.17-1.17 1.17 1.17a1.125 1.125 0 0 0 1.59 0l2.25-2.25a1.125 1.125 0 0 0 0-1.59l-1.17-1.17 1.17-1.17a1.125 1.125 0 0 0 0-1.59Z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193l-3.72-3.72a1.125 1.125 0 0 0-1.59.022l-1.17 1.17-1.17-1.17a1.125 1.125 0 0 0-1.59-.022l-3.72 3.72-1.98-.99v-4.286c0-.97.616-1.813 1.5-2.097m14.25-3.866-2.25-2.25a1.125 1.125 0 0 0-1.59 0l-1.17 1.17-1.17-1.17a1.125 1.125 0 0 0-1.59 0l-2.25 2.25a1.125 1.125 0 0 0 0 1.59l1.17 1.17-1.17 1.17a1.125 1.125 0 0 0 1.59 0l2.25-2.25a1.125 1.125 0 0 0 0-1.59l-1.17-1.17 1.17-1.17a1.125 1.125 0 0 0 0-1.59Z" />
   </svg>
 );
 
@@ -50,6 +50,18 @@ export const LightBulbIcon: React.FC<IconProps> = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" {...props}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.311a7.5 7.5 0 0 1-7.5 0c-1.421-.492-2.697-1.29-3.75-2.311M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
     </svg>
+);
+
+export const BookOpenIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3.001.507a3.001 3.001 0 2 0 .001 6.002 9.001 9.001 0 0 1 3.003-.868m0-5.632c2.28 0 4.25.9 5.625 2.348 1.375-1.448 3.345-2.348 5.625-2.348 1.052 0 2.062.18 3.001.507.414.14.81.303 1.189.488a3.001 3.001 0 0 1-1.189 5.516 9.001 9.001 0 0 0-3.003-.868m-5.625 15.632c-2.28 0-4.25-.9-5.625-2.348C4.375 19.552 2.405 20.452.125 20.452c-1.052 0-2.062-.18-3.001-.507V15.75c0 .354.02.705.06 1.051.414-.14.81-.303 1.189-.488a3.001 3.001 0 0 1 1.189-5.516 9.001 9.001 0 0 0 3.003.868m5.625 0c2.28 0 4.25.9 5.625 2.348 1.375-1.448 3.345-2.348 5.625-2.348 1.052 0 2.062.18 3.001.507v4.195c-.939.327-1.949.507-3.001.507a9.001 9.001 0 0 1-3.003-.868" />
+  </svg>
+);
+
+export const ListBulletIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 17.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+  </svg>
 );
 
 export const RafikiIcon: React.FC<IconProps> = (props) => (
