@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { AppMode } from '../types';
 import { useLanguage } from '../contexts/LanguageContext';
-import { IllustrationCvBuilder, IllustrationLetterWriter, IllustrationInterviewPrep, IllustrationCvReview, IllustrationLetterReview, IllustrationBusinessIdea } from './icons';
+import { IllustrationCvBuilder, IllustrationLetterWriter, IllustrationInterviewPrep, IllustrationCvReview, IllustrationLetterReview, IllustrationBusinessIdea, IllustrationJobInformation } from './icons';
 
 interface HomeScreenProps {
   setMode: (mode: AppMode) => void;
@@ -29,8 +30,12 @@ const services = [
     icon: <IllustrationInterviewPrep />,
   },
   { 
-    mode: AppMode.VENTURE_LAUNCHPAD, 
+    mode: AppMode.CAREER_GUIDANCE, 
     icon: <IllustrationBusinessIdea />,
+  },
+  { 
+    mode: AppMode.JOB_INFORMATION, 
+    icon: <IllustrationJobInformation />,
   },
 ];
 
@@ -38,8 +43,8 @@ export default function HomeScreen({ setMode }: HomeScreenProps): React.ReactNod
   const { t } = useLanguage();
 
   return (
-    <div className="flex flex-col items-center justify-center h-full bg-slate-50 dark:bg-slate-900 p-8 text-center overflow-y-auto">
-      <div className="mb-12">
+    <div className="flex flex-col items-center justify-center h-full bg-slate-50 dark:bg-slate-900 p-8 text-center overflow-y-auto custom-scrollbar">
+      <div className="mb-12 pt-12">
         <h1 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-white mb-3 tracking-tight">
           {t.modeDetails[AppMode.HOME].title}
         </h1>
@@ -48,7 +53,7 @@ export default function HomeScreen({ setMode }: HomeScreenProps): React.ReactNod
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl w-full pb-12">
         {services.map(service => (
           <button
             key={service.mode}

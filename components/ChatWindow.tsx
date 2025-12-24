@@ -57,7 +57,7 @@ export default function ChatWindow({ messages, onSendMessage, isLoading, mode }:
      mode === AppMode.LETTER_WRITER ||
      mode === AppMode.CV_REVIEW ||
      mode === AppMode.LETTER_REVIEW ||
-     mode === AppMode.VENTURE_LAUNCHPAD
+     mode === AppMode.CAREER_GUIDANCE
     ) && !isLoading;
 
   const handleExportPdf = async () => {
@@ -92,8 +92,8 @@ export default function ChatWindow({ messages, onSendMessage, isLoading, mode }:
       case AppMode.LETTER_REVIEW:
         fileName = 'Letter_Review.pdf';
         break;
-      case AppMode.VENTURE_LAUNCHPAD:
-        fileName = 'Venture_Launchpad.pdf';
+      case AppMode.CAREER_GUIDANCE:
+        fileName = 'Career_Guidance.pdf';
         break;
     }
     pdf.save(fileName);
@@ -157,8 +157,8 @@ export default function ChatWindow({ messages, onSendMessage, isLoading, mode }:
       case AppMode.LETTER_REVIEW:
         fileName = 'Letter_Review.docx';
         break;
-      case AppMode.VENTURE_LAUNCHPAD:
-        fileName = 'Venture_Launchpad.docx';
+      case AppMode.CAREER_GUIDANCE:
+        fileName = 'Career_Guidance.docx';
         break;
     }
     link.download = fileName;

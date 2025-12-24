@@ -7,7 +7,8 @@ export enum AppMode {
   LETTER_WRITER = 'LETTER_WRITER',
   LETTER_REVIEW = 'LETTER_REVIEW',
   INTERVIEW_PREP = 'INTERVIEW_PREP',
-  VENTURE_LAUNCHPAD = 'VENTURE_LAUNCHPAD',
+  CAREER_GUIDANCE = 'CAREER_GUIDANCE',
+  JOB_INFORMATION = 'JOB_INFORMATION',
 }
 
 // FIX: Define and export the ChatMessage interface.
@@ -38,4 +39,14 @@ export interface Translations {
     }
   };
   jobCreationGuide: any; // Using any for simplicity as it's a large nested object
+  jobInformation: {
+    categories: {
+      public: string;
+      private: string;
+      internships: string;
+      scholarships: string;
+    };
+    visitSite: string;
+    platforms: Record<string, { title: string; description: string }>;
+  };
 }

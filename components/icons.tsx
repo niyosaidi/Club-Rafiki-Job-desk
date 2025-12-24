@@ -10,6 +10,18 @@ export const HomeIcon: React.FC<IconProps> = (props) => (
   </svg>
 );
 
+export const BriefcaseIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 .621-.504 1.125-1.125 1.125H4.875c-.621 0-1.125-.504-1.125-1.125v-4.25m16.5 0a2.25 2.25 0 0 0-2.25-2.25H18V7.125a2.25 2.25 0 0 0-2.25-2.25h-7.5a2.25 2.25 0 0 0-2.25 2.25V11.9H5.25a2.25 2.25 0 0 0-2.25 2.25m16.5 0c0-1.242-1.008-2.25-2.25-2.25h-1.5a1.125 1.125 0 0 1-1.125-1.125V7.125c0-.621-.504-1.125-1.125-1.125h-7.5c-.621 0-1.125.504-1.125 1.125V8.625c0 .621-.504 1.125-1.125 1.125h-1.5a2.25 2.25 0 0 0-2.25 2.25" />
+  </svg>
+);
+
+export const ArrowTopRightOnSquareIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+  </svg>
+);
+
 export const DocumentTextIcon: React.FC<IconProps> = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" {...props}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
@@ -177,5 +189,15 @@ export const IllustrationBusinessIdea: React.FC<IconProps> = (props) => (
     <path d="M25 55V45L35 50L45 35L55 42V55H25Z" stroke="#FBBF24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     <path d="M55 25H35C32.2386 25 30 27.2386 30 30V32" stroke="#FBBF24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     <path d="M42 25L45 22L48 25" stroke="#FBBF24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+export const IllustrationJobInformation: React.FC<IconProps> = (props) => (
+  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <rect width="80" height="80" rx="16" fill="#F0F9FF"/>
+    <path d="M26 32C26 30.8954 26.8954 30 28 30H52C53.1046 30 54 30.8954 54 32V50C54 51.1046 53.1046 52 52 52H28C26.8954 52 26 51.1046 26 50V32Z" stroke="#0EA5E9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M36 30V26C36 24.8954 36.8954 24 38 24H42C43.1046 24 44 24.8954 44 26V30" stroke="#0EA5E9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <line x1="32" y1="38" x2="48" y2="38" stroke="#7DD3FC" strokeWidth="2" strokeLinecap="round"/>
+    <line x1="32" y1="44" x2="40" y2="44" stroke="#7DD3FC" strokeWidth="2" strokeLinecap="round"/>
   </svg>
 );

@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { AppMode } from '../types';
-import { DocumentTextIcon, PencilSquareIcon, ChatBubbleLeftRightIcon, GlobeAltIcon, ChevronDownIcon, HomeIcon, DocumentCheckIcon, EnvelopeOpenIcon, PlusCircleIcon, LightBulbIcon } from './icons';
+import { DocumentTextIcon, PencilSquareIcon, ChatBubbleLeftRightIcon, GlobeAltIcon, ChevronDownIcon, HomeIcon, DocumentCheckIcon, EnvelopeOpenIcon, LightBulbIcon, BriefcaseIcon } from './icons';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface SidebarProps {
@@ -15,7 +16,8 @@ const navModes = [
   AppMode.LETTER_WRITER,
   AppMode.LETTER_REVIEW,
   AppMode.INTERVIEW_PREP,
-  AppMode.VENTURE_LAUNCHPAD,
+  AppMode.CAREER_GUIDANCE,
+  AppMode.JOB_INFORMATION,
 ];
 
 const navIcons: Record<AppMode, React.ReactElement> = {
@@ -25,7 +27,8 @@ const navIcons: Record<AppMode, React.ReactElement> = {
     [AppMode.LETTER_WRITER]: <PencilSquareIcon />,
     [AppMode.LETTER_REVIEW]: <EnvelopeOpenIcon />,
     [AppMode.INTERVIEW_PREP]: <ChatBubbleLeftRightIcon />,
-    [AppMode.VENTURE_LAUNCHPAD]: <LightBulbIcon />,
+    [AppMode.CAREER_GUIDANCE]: <LightBulbIcon />,
+    [AppMode.JOB_INFORMATION]: <BriefcaseIcon />,
 };
 
 export default function Sidebar({ currentMode, setMode }: SidebarProps): React.ReactNode {
@@ -37,12 +40,12 @@ export default function Sidebar({ currentMode, setMode }: SidebarProps): React.R
         <img src="https://i.ibb.co/8L5kKXvq/Club-Rafiki-logo-Photoroom.png" alt="Club Rafiki Logo" className="w-11 h-11" />
         <h1 className="text-xl font-semibold text-slate-800 dark:text-white tracking-tight">{t.APP_NAME}</h1>
       </div>
-      <nav className="flex flex-col gap-2">
+      <nav className="flex flex-col gap-2 overflow-y-auto custom-scrollbar">
         {navModes.map((mode) => (
           <button
             key={mode}
             onClick={() => setMode(mode)}
-            className={`flex items-center gap-3.5 px-4 py-3 rounded-lg text-sm transition-colors duration-150 ${
+            className={`flex items-center gap-3.5 px-4 py-3 rounded-lg text-sm transition-colors duration-150 flex-shrink-0 ${
               currentMode === mode
                 ? 'bg-rafiki-blue-50 dark:bg-rafiki-blue-500/10 text-rafiki-blue-600 dark:text-rafiki-blue-50 font-semibold shadow-sm'
                 : 'text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50'
@@ -75,7 +78,7 @@ export default function Sidebar({ currentMode, setMode }: SidebarProps): React.R
           </div>
         </div>
       </div>
-      <div className="mt-auto text-center text-xs text-slate-400 dark:text-slate-500">
+      <div className="mt-auto text-center text-xs text-slate-400 dark:text-slate-500 pt-4">
         <p>{t.copyright}</p>
       </div>
     </aside>
